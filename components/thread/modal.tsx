@@ -16,7 +16,8 @@ export default function ThreadModal() {
   const { threads, setThreads, currentThread, setCurrentThread } =
     useContext(ThreadContext);
 
-  const onSubmitComment = () => {
+  const onSubmitComment = (e?: any) => {
+    e?.preventDefault();
     if (!currentThread) return;
 
     const thread =

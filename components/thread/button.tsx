@@ -33,7 +33,7 @@ export default function ThreadButton({
       >
         <div className="bg-white shadow-lg rounded-xl rounded-tl-none p-1 relative">
           <div className="text-base uppercase w-8 h-8 items-center justify-center flex bg-blue-500 rounded-full text-white">
-            {thread.comments[0].comment[0]}
+            {Array.from(thread.comments[0].comment)[0]}
           </div>
           <div className="w-4 h-4 text-white bg-red-500 text-[8px] rounded-full absolute top-0 right-0 flex items-center justify-center">
             <span>{thread.comments.length}</span>

@@ -76,6 +76,10 @@ export default function ThreadModal() {
       ? threads[currentThread.index]
       : null;
 
+  const onEmojiSelect = (emoji: any) => {
+    setCommentValue((prev) => prev + emoji.native);
+  };
+
   if (!currentThread) return null;
   return (
     <div
@@ -123,7 +127,7 @@ export default function ThreadModal() {
         {showPicker && (
           <Picker
             data={data}
-            onEmojiSelect={console.log}
+            onEmojiSelect={onEmojiSelect}
             navPosition="none"
             previewPosition="none"
             skinTonePosition="none"
